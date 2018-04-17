@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    >
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:id="@+id/camera">
+    <WebView
+        android:id="@+id/WebView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+
+</FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/camera"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:id="@+id/expan"
+        android:layout_marginBottom="5dp"
+        >
+        <ImageView
+            android:id="@+id/expanLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_expand_more"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout"
+        android:layout_below="@+id/expan"
+        android:visibility="visible"
+        >
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:text="TOP"
+            android:id="@+id/btnLED1"
+            android:layout_gravity="center_horizontal|top" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:text="LEFT"
+            android:id="@+id/btnLED2"
+            android:layout_gravity="left|center_vertical" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STOP"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:id="@+id/btnStop"
+            />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:text="RIGHT"
+            android:id="@+id/btnLED3"
+            android:layout_gravity="right|center_vertical" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:textAlignment="center"
+            android:text="DOWN"
+            android:id="@+id/btnLED4"
+            android:layout_gravity="bottom|center_horizontal" />
+
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frameLayout2"
+        android:visibility="gone"
+        android:layout_below="@+id/expan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/output"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Nhiệt Độ:"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#DF0029"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nhietDo"
+                android:text="none"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:text="Độ ẩm:"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textColor="#DF0029"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/doAm"
+                android:text="none"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:gravity="center_horizontal"
+            >
+            <Button
+                android:id="@+id/getInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:text="Request"
+                android:layout_marginRight="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Get"
+                android:id="@+id/get"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>
